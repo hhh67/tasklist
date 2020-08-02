@@ -9,8 +9,12 @@
             {!! Form::model($task, ['route' => 'tasks.store']) !!}
                 
                 <div class="form-group">
-                    {!! Form::label('content', '内容:') !!}
-                    {!! Form::text('content', null, ['class' => 'form-control', 'placeholder' => '新しいタスク']) !!}
+                    {!! Form::label('status', 'ステータス（10文字以内）：') !!}
+                    {!! Form::text('status', null, ['class' => 'form-control', 'placeholder' => '未完了']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('content', '内容（255文字以内）：') !!}
+                    {!! Form::text('content', null, ['class' => 'form-control', 'placeholder' => '牛乳を買いに行く']) !!}
                 </div>
                 
                 {!! Form::submit('追加する', ['class' => 'btn btn-primary']) !!}

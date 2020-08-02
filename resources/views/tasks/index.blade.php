@@ -9,20 +9,30 @@
             <thead>
                 <tr>
                     <th>タスクid</th>
-                    <th>最終更新</th>
+                    <th>ステータス</th>
                     <th>タスク内容</th>
+                    <th>最終更新</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($tasks as $task)
                     <tr>
                         <th>{!! link_to_route('tasks.show', $task->id, ['task' => $task->id]) !!}</th>
-                        <td>{{ $task->updated_at }}</td>
+                        <td>{{ $task->status }}</td>
                         <td>{{ $task->content }}</td>
+                        <td>{{ $task->updated_at }}</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        
+        <div class="mb-2">
+            <a class="add btn btn-primary" href="{!! route('tasks.create') !!}">
+                <i class="fas fa-plus"></i> タスクを追加
+            </a>
+        </div>
+        
+        
     @else
         <div class="text-center">
             <hgroup>

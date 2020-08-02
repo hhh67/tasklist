@@ -7,7 +7,11 @@
     {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
         
         <div class="form-group">
-            {!! Form::label('content', '内容: ') !!}
+            {!! Form::label('status', 'ステータス（10文字以内）: ') !!}
+            {!! Form::text('status', null, ['class' => 'form-control', 'placeholder' => '完了']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('content', '内容（255文字以内）: ') !!}
             {!! Form::text('content', null, ['class' => 'form-control', 'placeholder' => 'タスクを入力']) !!}
         </div>
         
