@@ -16,35 +16,13 @@
             .fa-tasks {
                 font-size: 16px;
             }
-            .add {
-                color: white;
-            }
-            .add:hover {
-                text-decoration: none;
-                color: #ccc;
+            .active:hover {
+                opacity: 0.6;
             }
         </style>
     </head>
     <body>
-        <header class="mb-5">
-            <nav class="navbar navbar-expand-sm navbar-dark">
-                <a class="navbar-brand p-2 text-light font-weight-bold" href="/"><i class="fas fa-tasks"></i> TaskList</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="nav-bar">
-                    <ul class="navbar-nav mr-auto"></ul>
-                    <ul class="navbar-nav">
-                         <li class="nav-item">
-                             <a class="add" href="{!! route('tasks.create') !!}">
-                                 <i class="fas fa-plus"></i> Add Task
-                             </a>
-                         </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        @include('commons.navbar')
         
         <div class="container">
             @include('commons.error_messages')
