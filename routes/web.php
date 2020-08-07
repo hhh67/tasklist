@@ -13,8 +13,7 @@
 
 
 //トップページ
-Route::get('/', 'TasksController@welcome');
-Route::get('index', 'TasksController@index');
+Route::get('/', 'TasksController@index');
 // タスク管理機能
 Route::resource('tasks', 'TasksController');
 // ユーザ登録機能

@@ -22,5 +22,9 @@
             {!! Form::close() !!}
         </div>
     </div>
+    
+    {{-- いらない --}}
+    @section('bgwhite')
+    @endsection
 
 @endsection

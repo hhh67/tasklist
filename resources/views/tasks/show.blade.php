@@ -23,5 +23,8 @@
         {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
     
+    {{-- いらない --}}
+    @section('bgwhite')
+    @endsection
     
 @endsection

@@ -18,5 +18,9 @@
         {!! Form::submit('タスクを更新', ['class' => 'btn btn-warning']) !!}
         
     {!! Form::close() !!}
-
+    
+    {{-- いらない --}}
+    @section('bgwhite')
+    @endsection
+    
 @endsection

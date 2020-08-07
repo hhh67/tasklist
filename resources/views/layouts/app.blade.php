@@ -28,6 +28,15 @@
             @include('commons.error_messages')
             
             @yield('content')
+            
+            @section('bgwhite')
+                <div class="row mr-2 ml-2 mb-5 justify-content-center">
+                    <div class="col-sm-7 bg-white rounded p-3">
+                        @yield('bgwhitecontent')
+                    </div>
+                </div>
+            @show
+            
         </div>
         
         <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" integrity="sha384-3Nqiqht3ZZEO8FKj7GR1upiI385J92VwWNLj+FqHxtLYxd9l+WYpeqSOrLh0T12c" crossorigin="anonymous"></script>
