@@ -2,17 +2,25 @@
 
 @section('content')
 
-    <h1>id: {{ $task->id }} のタスクの詳細</h1>
+    <h1>タスクid: @include('commons.taskid') のタスクの詳細</h1>
     
     <table class="table table-bordered table-hover mt-4">
         <tbody>
             <tr>
                 <th>id</th>
-                <td>{{ $task->id }}</td>
+                <td>@include('commons.taskid')</td>
+            </tr>
+            <tr>
+                <th>ステータス</th>
+                <td>{{ $task->status }}</td>
             </tr>
             <tr>
                 <th>内容</th>
                 <td>{{ $task->content }}</td>
+            </tr>
+            <tr>
+                <th>最終更新日時</th>
+                <td>{{ $task->created_at }}</td>
             </tr>
         </tbody>
     </table>

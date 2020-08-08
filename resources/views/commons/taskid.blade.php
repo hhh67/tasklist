@@ -1,0 +1,1 @@
+@php print $task->id + 1 - App\Task::first()->id; @endphp
